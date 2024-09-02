@@ -204,14 +204,6 @@ services:
     depends_on:
       ac-database:
         condition: service_healthy
-  nginx:
-    image: nginx:latest
-    ports:
-      - "9999:80"
-    volumes:
-      - /var/www/html:/usr/share/nginx/html
-    restart: always
-    user: acore
 volumes:
   ac-database:
   ac-client-data:
